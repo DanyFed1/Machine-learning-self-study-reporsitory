@@ -1,3 +1,4 @@
+# Iterators and iterables
 lists = [[1,2,3], [4,5,6], [7,8,9]]
 
 for sublist in lists:
@@ -18,3 +19,12 @@ i = iter(lists)
 print(next(i))
 print(next(i))
 print(next(i))
+
+#Generators: yield statement returns a next value to the caller. Yield is not to be combined with return
+# and serves a pupose of creating generators
+def factors(n):
+    for i in range(1, n+1):
+        if n % i == 0:
+            yield i
+factor = factors(100)
+print(factors)
